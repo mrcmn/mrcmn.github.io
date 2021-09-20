@@ -1,0 +1,323 @@
+[
+  {
+    "category": "Getting Started",
+    "label": "Intro",
+    "url": "https://puppet-enterprise-guide.com/"
+  },{
+    "category": "Getting Started",
+    "label": "What is Puppet Enterprise?",
+    "url": "https://puppet-enterprise-guide.com/theory/what-is-puppet-enterprise.html"
+  },{
+    "category": "Installing PE",
+    "label": "PE Prerequisities",
+    "url": "https://puppet-enterprise-guide.com/theory/pe-prequisites.html"
+  },{
+    "category": "Installing PE",
+    "label": "PE Prerequisities - Prequisities",
+    "url": "https://puppet-enterprise-guide.com/theory/pe-prequisites.html#prequisities"
+  },{
+    "category": "Installing PE",
+    "label": "PE Prerequisities - Requirements",
+    "url": "https://puppet-enterprise-guide.com/theory/pe-prequisites.html#requirements"
+  },{
+    "category": "Installing PE",
+    "label": "LAB: Install PE",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-install-pe.html"
+  },{
+    "category": "Inventory",
+    "label": "Package Inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/package-inventory.html"
+  },{
+    "category": "Inventory",
+    "label": "Package Inventory - Viewing Package inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/package-inventory.html#viewing-package-inventory"
+  },{
+    "category": "Inventory",
+    "label": "Package Inventory - Enable and Collect Package inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/package-inventory.html#enable-and-collect-package-inventory"
+  },{
+    "category": "Inventory",
+    "label": "Node Inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html"
+  },{
+    "category": "Inventory",
+    "label": "Node Inventory - Agent Based Nodes",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#agent-based-nodes"
+  },{
+    "category": "Inventory",
+    "label": "Agent Based Nodes - Authenication and Communication",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#authentication-and-communication"
+  },{
+    "category": "Inventory",
+    "label": "Agent Based Nodes - TLS",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#tls"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#inspecting-node-inventory"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Facts",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#facts"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Packages",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#packages"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Configuration",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#configuration"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Reports",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#reports"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#groups"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Activity",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#activity"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#groups"
+  },{
+    "category": "Inventory",
+    "label": "Add Nodes to Inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#add-nodes-to-inventory"
+  },{
+    "category": "Inventory",
+    "label": "Add Nodes to Inventory - Add Agent Nodes",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#add-agent-nodes"
+  },{
+    "category": "Inventory",
+    "label": "Add Agent Nodes - Download agent package(s)",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#download-agent-packages"
+  },{
+    "category": "Inventory",
+    "label": "Download agent package(s) - Common platform examples",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#common-platform-examples"
+  },{
+    "category": "Inventory",
+    "label": "Add Agent Nodes - Install agent package",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#install-agent-package"
+  },{
+    "category": "Inventory",
+    "label": "Add Agent Nodes - Approve Certificate(s)",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#approving-certificates"
+  },{
+    "category": "Inventory",
+    "label": "Add Agentless Nodes",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#add-agentless-nodes"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - How do they work?",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#how-do-they-work"
+  },{
+    "category": "Inventory",
+    "label": "How do they work? - Node Group Best Practice",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#node-group-best-practice"
+  },{
+    "category": "Inventory",
+    "label": "How do they work? - Node Group Inheritance",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#node-group-inheritance"
+  },{
+    "category": "Inventory",
+    "label": "How do they work? - Environment Groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#environment-groups"
+  },{
+    "category": "Inventory",
+    "label": "How do they work? - RBAC with Node Groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#rbac-with-node-groups"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - Create a Node group",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#create-a-node-group"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - Create a nested Node group",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#create-a-nested-node-group"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - Add configurations to Node groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#add-configurations-to-node-groups"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - Add nodes to Node groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#add-nodes-to-node-groups"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - Add configurations to Node groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#add-configurations-to-node-groups"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - Add nodes to Node groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#add-nodes-to-node-groups"
+  },{
+    "category": "Inventory",
+    "label": "Add nodes to Node groups - Manually",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#manually"
+  },{
+    "category": "Inventory",
+    "label": "Add nodes to Node groups - Dynamically",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#dynamically"
+  },{
+    "category": "Inventory",
+    "label": "LAB: Enabling Package Inventory",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-enable-package-inventory.html"
+  },{
+    "category": "Inventory",
+    "label": "LAB: Add Node to Inventory",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-add-node-to-inventory.html"
+  },{
+    "category": "Inventory",
+    "label": "LAB: Create a Node Group",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-create-a-node-group.html"
+  },{
+    "category": "Creating and Running Tasks",
+    "label": "What is a task?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Creating and Running Tasks",
+    "label": "LAB: Create a task from a script",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Creating and Running Tasks",
+    "label": "LAB: Run your task",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Creating and Running Plans",
+    "label": "What is a Plan?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Creating and Running Plans",
+    "label": "LAB: Create a simple plan",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Creating and Running Plans",
+    "label": "LAB: Running your plan",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Enforcing Desired State",
+    "label": "What is Desired State?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Enforcing Desired State",
+    "label": "Defining State in Code",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Enforcing Desired State",
+    "label": "LAB: Creating a Desired state config",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Enforcing Desired State",
+    "label": "LAB: Applying your configuration",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Puppet Forge",
+    "label": "How do I use the Forge?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Puppet Forge",
+    "label": "LAB: Using a module from the Forge?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Puppet Forge",
+    "label": "LAB: Applying your configuration",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Patch Management",
+    "label": "What is Patch Management in PE?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Patch Management",
+    "label": "LAB: Enable Patch Management",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Patch Management",
+    "label": "LAB: Patching Nodes",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Delegating Control (RBAC)",
+    "label": "What is RBAC in PE?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Going Further",
+    "label": "Workstation Setup",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Roles and Profiles",
+    "label": "What are Roles and Profiles?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Roles and Profiles",
+    "label": "LAB: Build a Role",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Working with Hiera",
+    "label": "What is Hiera?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Working with Hiera",
+    "label": "LAB: Setting Hiera variables?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Environment groups",
+    "label": "What are Environment Groups?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Environment groups",
+    "label": "LAB: Create an Environment Groups",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Reference",
+    "label": "Puppet Code Examples",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Reference",
+    "label": "Log Locations",
+    "url": "https://puppet.com/docs/pe/2021.1/log-locations-reference.html"
+  },{
+    "category": "Reference",
+    "label": "Important directories & Files",
+    "url": "https://puppet.com/docs/puppet/7/dirs_important_directories.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "Orchestrator APIs",
+    "url": "https://puppet.com/docs/pe/2021.1/orchestrator_api_v1_endpoints.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "RBAC API v1",
+    "url": "https://puppet.com/docs/pe/2021.1/rbac_api_v1.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "RBAC API v2",
+    "url": "https://puppet.com/docs/pe/2021.1/rbac_api_v2_endpoints.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "RBAC Activity Service API",
+    "url": "https://puppet.com/docs/pe/2021.1/activity_api.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "Node classifier API v1",
+    "url": "https://puppet.com/docs/pe/2021.1/node_classifier_service_api.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "Node classifier API v2",
+    "url": "https://puppet.com/docs/pe/2021.1/node_classifier_service_api_v2.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "Node Inventory API",
+    "url": "https://puppet.com/docs/pe/2021.1/node_inventory_api.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "Puppet Status API",
+    "url": "https://puppet.com/docs/pe/2021.1/status_api.html"
+  }
+]

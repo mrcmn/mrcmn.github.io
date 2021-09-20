@@ -1,0 +1,883 @@
+[
+  {
+    "category": "Getting Started",
+    "label": "Intro",
+    "url": "https://puppet-enterprise-guide.com/"
+  },{
+    "category": "Getting Started",
+    "label": "What is Puppet Enterprise?",
+    "url": "https://puppet-enterprise-guide.com/theory/what-is-puppet-enterprise.html"
+  },{
+    "category": "Installing PE",
+    "label": "PE Prerequisities",
+    "url": "https://puppet-enterprise-guide.com/theory/pe-prequisites.html"
+  },{
+    "category": "Installing PE",
+    "label": "PE Prerequisities - Prequisities",
+    "url": "https://puppet-enterprise-guide.com/theory/pe-prequisites.html#prequisities"
+  },{
+    "category": "Installing PE",
+    "label": "PE Prerequisities - Requirements",
+    "url": "https://puppet-enterprise-guide.com/theory/pe-prequisites.html#requirements"
+  },{
+    "category": "Installing PE",
+    "label": "LAB: Install PE",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-install-pe.html"
+  },{
+    "category": "Inventory",
+    "label": "Package Inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/package-inventory.html"
+  },{
+    "category": "Inventory",
+    "label": "Package Inventory - Viewing Package inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/package-inventory.html#viewing-package-inventory"
+  },{
+    "category": "Inventory",
+    "label": "Package Inventory - Enable and Collect Package inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/package-inventory.html#enable-and-collect-package-inventory"
+  },{
+    "category": "Inventory",
+    "label": "Node Inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html"
+  },{
+    "category": "Inventory",
+    "label": "Node Inventory - Agent Based Nodes",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#agent-based-nodes"
+  },{
+    "category": "Inventory",
+    "label": "Agent Based Nodes - Authenication and Communication",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#authentication-and-communication"
+  },{
+    "category": "Inventory",
+    "label": "Agent Based Nodes - TLS",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#tls"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#inspecting-node-inventory"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Facts",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#facts"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Packages",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#packages"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Configuration",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#configuration"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Reports",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#reports"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#groups"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Activity",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#activity"
+  },{
+    "category": "Inventory",
+    "label": "Inspecting Node Inventory - Groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#groups"
+  },{
+    "category": "Inventory",
+    "label": "Add Nodes to Inventory",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#add-nodes-to-inventory"
+  },{
+    "category": "Inventory",
+    "label": "Add Nodes to Inventory - Add Agent Nodes",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#add-agent-nodes"
+  },{
+    "category": "Inventory",
+    "label": "Add Agent Nodes - Download agent package(s)",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#download-agent-packages"
+  },{
+    "category": "Inventory",
+    "label": "Download agent package(s) - Common platform examples",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#common-platform-examples"
+  },{
+    "category": "Inventory",
+    "label": "Add Agent Nodes - Install agent package",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#install-agent-package"
+  },{
+    "category": "Inventory",
+    "label": "Add Agent Nodes - Approve Certificate(s)",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#approve-certificates"
+  },{
+    "category": "Inventory",
+    "label": "Add Agentless Nodes",
+    "url": "https://puppet-enterprise-guide.com/theory/node-inventory.html#add-agentless-nodes"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - How do they work?",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#how-do-they-work"
+  },{
+    "category": "Inventory",
+    "label": "How do they work? - Node Group Best Practice",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#node-group-best-practice"
+  },{
+    "category": "Inventory",
+    "label": "How do they work? - Node Group Inheritance",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#node-group-inheritance"
+  },{
+    "category": "Inventory",
+    "label": "How do they work? - Environment Groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#environment-groups"
+  },{
+    "category": "Inventory",
+    "label": "How do they work? - RBAC with Node Groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#rbac-with-node-groups"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - Create a Node group",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#create-a-node-group"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - Create a nested Node group",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#create-a-nested-node-group"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - Add configurations to Node groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#add-configurations-to-node-groups"
+  },{
+    "category": "Inventory",
+    "label": "Node Groups - Add nodes to Node groups",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#add-nodes-to-node-groups"
+  },{
+    "category": "Inventory",
+    "label": "Add nodes to Node groups - Manually",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#manually"
+  },{
+    "category": "Inventory",
+    "label": "Add nodes to Node groups - Dynamically",
+    "url": "https://puppet-enterprise-guide.com/theory/node-groups.html#dynamically"
+  },{
+    "category": "Inventory",
+    "label": "LAB: Enable Package Inventory",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-enable-package-inventory.html"
+  },{
+    "category": "Inventory",
+    "label": "LAB: Add Node to Inventory",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-add-node-to-inventory.html"
+  },{
+    "category": "Inventory",
+    "label": "LAB: Create a Node Group",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-create-a-node-group.html"
+  },{
+    "category": "Control Repo",
+    "label": "Control Repo Overview",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html"
+  },{
+    "category": "Control Repo",
+    "label": "What is the Control Repo?",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#what-is-the-control-repo"
+  },{
+    "category": "Control Repo",
+    "label": "Benefits",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#benefits"
+  },{
+    "category": "Control Repo",
+    "label": "Pre-Bundled configurations",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#pre-bundled-configurations"
+  },{
+    "category": "Control Repo",
+    "label": "What can be added to the control repo?",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#what-can-be-added-to-the-control-repo"
+  },{
+    "category": "Control Repo",
+    "label": "How does it work?",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#how-does-it-work"
+  },{
+    "category": "Control Repo",
+    "label": "How does it work? - Adding configurations to the control repo",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#adding-configurations-to-the-control-repo"
+  },{
+    "category": "Control Repo",
+    "label": "Adding configurations to the control repo - Control Repo",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#control-repo"
+  },{
+    "category": "Control Repo",
+    "label": "Adding configurations to the control repo - Primary Puppet Server",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#primary-puppet-server"
+  },{
+    "category": "Control Repo",
+    "label": "Adding configurations to the control repo - Workstation",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#workstation"
+  },{
+    "category": "Control Repo",
+    "label": "Control repo layout",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#control-repo-layout"
+  },{
+    "category": "Control Repo",
+    "label": "Control repo layout - The Puppetfile",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#the-puppetfile"
+  },{
+    "category": "Control Repo",
+    "label": "The site-modules directory",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#the-site-modules-directory"
+  },{
+    "category": "Control Repo",
+    "label": "The site-modules directory - Tasks",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#tasks"
+  },{
+    "category": "Control Repo",
+    "label": "The site-modules directory - Plans",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#plans"
+  },{
+    "category": "Control Repo",
+    "label": "The site-modules directory - Desired State Code",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#desired-state-code"
+  },{
+    "category": "Control Repo",
+    "label": "The site-modules directory - Modules",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#modules"
+  },{
+    "category": "Control Repo",
+    "label": "Control repo layout - Hiera",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#hiera"
+  },{
+    "category": "Control Repo",
+    "label": "Hiera - Defining Hiera Hierarchy",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#defining-hiera-hierarchy"
+  },{
+    "category": "Control Repo",
+    "label": "Hiera - Hiera Data",
+    "url": "https://puppet-enterprise-guide.com/theory/control-repo-overview.html#hiera-data"
+  },{
+    "category": "Tasks",
+    "label": "Tasks Overview",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html"
+  },{
+    "category": "Tasks",
+    "label": "What is a Task?",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#what-is-a-task"
+  },{
+    "category": "Tasks",
+    "label": "Use Cases",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#use-cases"
+  },{
+    "category": "Tasks",
+    "label": "Benefits",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#benefits"
+  },{
+    "category": "Tasks",
+    "label": "How do they work?",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#how-do-they-work"
+  },{
+    "category": "Tasks",
+    "label": "How do they work? - Components of a Task",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#components-of-a-task"
+  },{
+    "category": "Tasks",
+    "label": "How do they work? - Do I need to use Task Metadata?",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#do-i-need-to-use-task-metadata"
+  },{
+    "category": "Tasks",
+    "label": "How do they work? - What happens during a task run?",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#what-happens-during-a-task-run"
+  },{
+    "category": "Tasks",
+    "label": "How do they work? - Storage",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#storage"
+  },{
+    "category": "Tasks",
+    "label": "How do they work? - Naming",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#naming"
+  },{
+    "category": "Tasks",
+    "label": "Running tasks in PE",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#running-tasks-in-pe"
+  },{
+    "category": "Tasks",
+    "label": "Examples",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#examples"
+  },{
+    "category": "Tasks",
+    "label": "Troubleshooting",
+    "url": "https://puppet-enterprise-guide.com/theory/tasks-overview.html#troubleshooting"
+  },{
+    "category": "Tasks",
+    "label": "Task Example Walkthrough",
+    "url": "https://puppet-enterprise-guide.com/theory/task-example.html"
+  },{
+    "category": "Tasks",
+    "label": "LAB: Create a Task",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-create-a-task.html"
+  },{
+    "category": "Tasks",
+    "label": "LAB: Run your Task",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-run-your-task.html"
+  },{
+    "category": "Plans",
+    "label": "Plans Overview",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html"
+  },{
+    "category": "Plans",
+    "label": "What is a Plan?",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#what-is-a-plan"
+  },{
+    "category": "Plans",
+    "label": "Use Cases",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#use-cases"
+  },{
+    "category": "Plans",
+    "label": "How do they work?",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#how-do-they-work"
+  },{
+    "category": "Plans",
+    "label": "How do they work? - Components of a Plan",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#components-of-a-plan"
+  },{
+    "category": "Plans",
+    "label": "How do they work? - What happens during a plan run?",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#what-happens-during-a-plan-run"
+  },{
+    "category": "Plans",
+    "label": "How do they work? - Format",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#format"
+  },{
+    "category": "Plans",
+    "label": "How do they work? - Internal layout of Puppet plan manifests",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#internal-layout-of-puppet-plan-manifests"
+  },{
+    "category": "Plans",
+    "label": "How do they work? - Storage",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#storage"
+  },{
+    "category": "Plans",
+    "label": "How do they work? - Naming",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#naming"
+  },{
+    "category": "Plans",
+    "label": "How do they work? - Parameters",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#parameters"
+  },{
+    "category": "Plans",
+    "label": "How do they work? - Plan Metadata",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#plan-metadata"
+  },{
+    "category": "Plans",
+    "label": "How do they work? - Plan functions",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#plan-functions"
+  },{
+    "category": "Plans",
+    "label": "Running Plans in PE",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#running-plans-in-pe"
+  },{
+    "category": "Plans",
+    "label": "Examples",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#examples"
+  },{
+    "category": "Plans",
+    "label": "Troubleshooting",
+    "url": "https://puppet-enterprise-guide.com/theory/plans-overview.html#troubleshooting"
+  },{
+    "category": "Plans",
+    "label": "Plan Example Walkthrough",
+    "url": "https://puppet-enterprise-guide.com/theory/plan-example.html"
+  },{
+    "category": "Plans",
+    "label": "LAB: Create a Plan",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-create-a-plan.html"
+  },{
+    "category": "Plans",
+    "label": "LAB: Run your Plan",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-run-your-plan.html"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Desired State Enforcement Overview",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "What is Desired State Enforcement?",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#what-is-desired-state-enforcement"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Primary Use Cases",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#primary-use-cases"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Benefits",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#benefits"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Key Components",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#key-components"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Key Components - Control Repo",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#control-repo"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Key Components - Puppet Server",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#puppet-server"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Key Components - Puppet Agent",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#puppet-agent"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Key Components - Puppet Database",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#puppet-database"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work?",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#how-does-it-work"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work? - Preparation",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#preparation"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work? - Desired state enforcement",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#desired-state-enforcement"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work? - Post enforcement",
+    "url": "https://puppet-enterprise-guide.com/theory/desired-state-enforcement-overview.html#post-enforcement"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Defining State in Code",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "What is Puppet code?",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#what-is-puppet-code"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Puppet code vs Scripting",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#puppet-code-vs-scripting"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work?",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#how-does-it-work"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work? - Resources",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#resources"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Resources - What resource types are available?",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#what-resource-types-are-available"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Resources - Turning resources into configurations",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#turning-resources-into-configurations"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work? - Manifests",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#manifests"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Manifests - Location",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#location"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Manifests - Internal layout of manifests",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#internal-layout-of-manifests"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Classes",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#classes"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Classes - Class Definition and Namespacing",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#class-definition-and-namespacing"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Classes - Adding attributes",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#adding-attributes"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Classes - Class Declaration",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#class-declaration"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Classes - Specifying custom attributes via hiera",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#specifying-custom-attributes-via-hiera"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work? - Relationships and Ordering",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#relationships-and-ordering"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work? - Pushing configurations to the Puppet Server",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#pushing-configurations-to-the-puppet-server"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work? - Apply configuration to node group",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#apply-configuration-to-node-group"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work? - Run Puppet to apply configuration",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#run-puppet-to-apply-configuration"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "How does it work? - Reviewing Reports",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#reviewing-reports"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Puppet Code Resources",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#puppet-code-resources"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Examples",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#puppet-code-examples"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Troubleshooting",
+    "url": "https://puppet-enterprise-guide.com/theory/defining-state-in-code.html#troubleshooting"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "Configuration Example Walkthrough",
+    "url": "https://puppet-enterprise-guide.com/theory/configuration-example.html"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "LAB: Create a Desired State Configuration",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-create-a-desired-state-configuration.html"
+  },{
+    "category": "Desired State Enforcement",
+    "label": "LAB: Apply your Configuration",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-apply-your-configuration.html"
+  },{
+    "category": "Puppet Forge",
+    "label": "Forge Overview",
+    "url": "https://puppet-enterprise-guide.com/theory/forge-overview.html"
+  },{
+    "category": "Puppet Forge",
+    "label": "What is the Puppet Forge?",
+    "url": "https://puppet-enterprise-guide.com/theory/forge-overview.html#what-is-the-puppet-forge"
+  },{
+    "category": "Puppet Forge",
+    "label": "What's a module and what does it contain?",
+    "url": "https://puppet-enterprise-guide.com/theory/forge-overview.html#whats-a-module-and-what-does-it-contain"
+  },{
+    "category": "Puppet Forge",
+    "label": "Navigating the forge",
+    "url": "https://puppet-enterprise-guide.com/theory/forge-overview.html#navigating-the-forge"
+  },{
+    "category": "Puppet Forge",
+    "label": "Understanding module badges and ratings",
+    "url": "https://puppet-enterprise-guide.com/theory/forge-overview.html#understanding-module-badges-and-ratings"
+  },{
+    "category": "Puppet Forge",
+    "label": "Forge Module Example Walkthrough",
+    "url": "https://puppet-enterprise-guide.com/theory/forge-example.html"
+  },{
+    "category": "Puppet Forge",
+    "label": "LAB: Use a Module from the Forge",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-use-a-module-from-the-forge.html"
+  },{
+    "category": "Puppet Forge",
+    "label": "LAB: Apply your Module Configuration",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-apply-your-module-configuration.html"
+  },{
+    "category": "Patch Management",
+    "label": "Using Patch Management",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html"
+  },{
+    "category": "Patch Management",
+    "label": "Overview",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#overview"
+  },{
+    "category": "Patch Management",
+    "label": "How does it work?",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#how-does-it-work"
+  },{
+    "category": "Patch Management",
+    "label": "How does it work? - Patch Management Compatibility",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#patch-management-compatibility"
+  },{
+    "category": "Patch Management",
+    "label": "How does it work? - Onboarding nodes",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#onboarding-nodes"
+  },{
+    "category": "Patch Management",
+    "label": "Onboarding nodes - Example patching node group structures",
+    "url": "https://puppet-enterprise-guide.com/theory/forge-overview.html"
+  },{
+    "category": "Patch Management",
+    "label": "Onboarding nodes - pe_patch class parameters",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#pe_patch-class-parameters"
+  },{
+    "category": "Patch Management",
+    "label": "How does it work? - Reviewing Patch Information",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#reviewing-patch-information"
+  },{
+    "category": "Patch Management",
+    "label": "How does it work? - Patching Nodes",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#patching-nodes"
+  },{
+    "category": "Patch Management",
+    "label": "Patching Nodes - Patch Task Parameters",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#patch-task-parameters"
+  },{
+    "category": "Patch Management",
+    "label": "Patch Task Parameters - Reboots",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#reboots"
+  },{
+    "category": "Patch Management",
+    "label": "Patch Task Parameters - Security Patches",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#security-patches"
+  },{
+    "category": "Patch Management",
+    "label": "Patch Task Parameters - Additional Parameters",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#additional-parameters"
+  },{
+    "category": "Patch Management",
+    "label": "How does it work? - Patch Retrieval Cadence",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#patch-retrieval-cadence"
+  },{
+    "category": "Patch Management",
+    "label": "How does it work? - Alternative Approaches",
+    "url": "https://puppet-enterprise-guide.com/theory/using-patch-management.html#alternative-approaches"
+  },{
+    "category": "Patch Management",
+    "label": "LAB: Enable Patch Management",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-enable-patch-management.html"
+  },{
+    "category": "Patch Management",
+    "label": "LAB: Apply Patches",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-apply-patches.html"
+  },{
+    "category": "Role Based Access Control",
+    "label": "Using Role Based Access Control",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html"
+  },{
+    "category": "Role Based Access Control",
+    "label": "Overview",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#overview"
+  },{
+    "category": "Role Based Access Control",
+    "label": "Why use it?",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#why-use-it"
+  },{
+    "category": "Role Based Access Control",
+    "label": "How does it work?",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#how-does-it-work"
+  },{
+    "category": "Role Based Access Control",
+    "label": "How does it work? - What types of activity can be controlled?",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#what-types-of-activity-can-be-controlled"
+  },{
+    "category": "Role Based Access Control",
+    "label": "How does it work? - Creating Users",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#creating-users"
+  },{
+    "category": "Role Based Access Control",
+    "label": "Creating Users - Local",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#local"
+  },{
+    "category": "Role Based Access Control",
+    "label": "Creating Users - External Directory Service",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#external-directory-service"
+  },{
+    "category": "Role Based Access Control",
+    "label": "How does it work? - Creating Roles",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#creating-roles"
+  },{
+    "category": "Role Based Access Control",
+    "label": "Creating Roles - Adding users to Roles",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#adding-users-to-roles"
+  },{
+    "category": "Role Based Access Control",
+    "label": "Creating Roles - Adding Permissions to Roles",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#adding-permissions-to-roles"
+  },{
+    "category": "Role Based Access Control",
+    "label": "Summary",
+    "url": "https://puppet-enterprise-guide.com/theory/using-role-based-access-control.html#summary"
+  },{
+    "category": "Role Based Access Control",
+    "label": "LAB: Delegate Permissions",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-delegate-permissions.html"
+  },{
+    "category": "Role Based Access Control",
+    "label": "LAB: Exercise Limited Action",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-exercise-limited-action.html"
+  },{
+    "category": "Going Further",
+    "label": "Workstation Setup",
+    "url": "https://puppet-enterprise-guide.com/theory/workstation-setup.html"
+  },{
+    "category": "Roles and Profiles",
+    "label": "Roles and Profiles Overview",
+    "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html"
+  },{
+    "category": "Roles and Profiles",
+    "label": "Description",
+    "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html#description"
+  },{
+    "category": "Roles and Profiles",
+    "label": "Why use them?",
+    "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html#why-use-them"
+  },{
+    "category": "Roles and Profiles",
+    "label": "How do they work?",
+    "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html#how-do-they-work"
+  },{
+    "category": "Roles and Profiles",
+    "label": "How do they work? - Components",
+    "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html#components"
+  },{
+    "category": "Roles and Profiles",
+    "label": "How do they work? - Role and Profile Directories",
+    "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html#roles-and-profiles-directories"
+  },{
+    "category": "Roles and Profiles",
+    "label": "Examples",
+    "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html#examples"
+  },{
+    "category": "Roles and Profiles",
+    "label": "Roles and Profiles Example Walkthrough",
+    "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-example.html"
+  },{
+    "category": "Roles and Profiles",
+    "label": "LAB: Build a Role",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-build-a-role.html"
+  },{
+    "category": "Roles and Profiles",
+    "label": "LAB: Apply Role Configuration",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-apply-role-configuration.html"
+  },{
+    "category": "Roles and Profiles",
+    "label": "LAB: Add to your Role",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-add-to-your-role.html"
+  },{
+    "category": "Hiera",
+    "label": "Hiera Overview",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html"
+  },{
+    "category": "Hiera",
+    "label": "Description",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#description"
+  },{
+    "category": "Hiera",
+    "label": "Why would you use it?",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#why-would-you-use-it"
+  },{
+    "category": "Hiera",
+    "label": "How does it work?",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#how-does-it-work"
+  },{
+    "category": "Hiera",
+    "label": "How does it work? - Data hierarchy",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#data-hierarchy"
+  },{
+    "category": "Hiera",
+    "label": "How does it work? - Hiera data layers",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#hiera-data-layers"
+  },{
+    "category": "Hiera",
+    "label": "Hiera data layers - Common data layer",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#common-data-layer"
+  },{
+    "category": "Hiera",
+    "label": "Hiera data layers - Nodes data layer",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#nodes-data-layer"
+  },{
+    "category": "Hiera",
+    "label": "Hiera data layers - Adding custom data layers",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#adding-custom-data-layers"
+  },{
+    "category": "Hiera",
+    "label": "How does it work? - Referring to Hiera in Code",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#referring-to-hiera-in-code"
+  },{
+    "category": "Hiera",
+    "label": "How does it work? - Specifying attributes in Hiera",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#specifying-attributes-in-hiera"
+  },{
+    "category": "Hiera",
+    "label": "Specifying attributes in Hiera - Namespacing",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#namespacing"
+  },{
+    "category": "Hiera",
+    "label": "Specifying attributes in Hiera - Attributes in the Common data Layer",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#specifying-attributes-in-the-common-data-layer"
+  },{
+    "category": "Hiera",
+    "label": "Specifying attributes in Hiera - Attributes in the Nodes data Layer",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#specifying-attributes-in-the-nodes-data-layer"
+  },{
+    "category": "Hiera",
+    "label": "How does it work? - Testing Hiera lookups",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-overview.html#testing-hiera-lookups"
+  },{
+    "category": "Hiera",
+    "label": "Hiera Example Walkthrough",
+    "url": "https://puppet-enterprise-guide.com/theory/hiera-example.html"
+  },{
+    "category": "Hiera",
+    "label": "LAB: Create a Hiera Variable",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-create-a-hiera-variable.html"
+  },{
+    "category": "Hiera",
+    "label": "LAB: Create Common Hiera Data",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-create-common-hiera-data.html"
+  },{
+    "category": "Hiera",
+    "label": "LAB: Create Node Specific Hiera Data",
+    "url": "https://puppet-enterprise-guide.com/labs/lab-create-node-specific-data.html"
+  },{
+    "category": "Reference",
+    "label": "Puppet Code Examples",
+    "url": "https://github.com/kinners00/puppet-examples/tree/production/examples/puppet-code"
+  },{
+    "category": "Reference",
+    "label": "Task Examples",
+    "url": "https://github.com/kinners00/puppet-examples/tree/production/examples/tasks"
+  },{
+    "category": "Reference",
+    "label": "Plan Examples",
+    "url": "https://github.com/kinners00/puppet-examples/tree/production/examples/plans"
+  },{
+    "category": "Reference",
+    "label": "Log Locations",
+    "url": "https://puppet.com/docs/pe/latest/log-locations-reference.html"
+  },{
+    "category": "Reference",
+    "label": "Important directories & Files",
+    "url": "https://puppet.com/docs/puppet/latest/dirs_important_directories.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "Orchestrator APIs",
+    "url": "https://puppet.com/docs/pe/latest/orchestrator_api_v1_endpoints.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "RBAC API v1",
+    "url": "https://puppet.com/docs/pe/latest/rbac_api_v1.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "RBAC API v2",
+    "url": "https://puppet.com/docs/pe/latest/rbac_api_v2_endpoints.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "RBAC Activity Service API",
+    "url": "https://puppet.com/docs/pe/latest/activity_api.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "Node classifier API v1",
+    "url": "https://puppet.com/docs/pe/latest/node_classifier_service_api.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "Node classifier API v2",
+    "url": "https://puppet.com/docs/pe/latest/node_classifier_service_api_v2.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "Node Inventory API",
+    "url": "https://puppet.com/docs/pe/latest/node_inventory_api.html"
+  },{
+    "category": "Puppet Enterprise APIs",
+    "label": "Puppet Status API",
+    "url": "https://puppet.com/docs/pe/latest/status_api.html"
+  }
+]

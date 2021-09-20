@@ -1,0 +1,139 @@
+/*
+Typography definitions
+*/
+
+/* Inconsolata font for code highlighting/blocks. */
+@font-face {
+    font-family: "marketing-mono";
+    src: url("/fonts/marketing-mono/Inconsolata-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Italic Fonts */
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web ThinItalic"), local("CalibreWeb-ThinItalic"),
+      url("/fonts/marketing-sans/CalibreWeb-ThinItalic.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-ThinItalic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Light Italic"), local("CalibreWeb-LightItalic"),
+      url("/fonts/marketing-sans/CalibreWeb-LightItalic.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Regular Italic"), local("CalibreWeb-RegularItalic"),
+      url("/fonts/marketing-sans/CalibreWeb-RegularItalic.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-RegularItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Medium Italic"), local("CalibreWeb-MediumItalic"),
+      url("/fonts/marketing-sans/CalibreWeb-MediumItalic.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Semibold Italic"), local("CalibreWeb-SemiboldItalic"),
+      url("/fonts/marketing-sans/CalibreWeb-SemiboldItalic.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-SemiboldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Bold Italic"), local("CalibreWeb-BoldItalic"),
+      url("/fonts/marketing-sans/CalibreWeb-BoldItalic.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Black Italic"), local("CalibreWeb-BlackItalic"),
+      url("/fonts/marketing-sans/CalibreWeb-BlackItalic.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-BlackItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  /* Normal Fonts */
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Thin"), local("CalibreWeb-Thin"),
+      url("/fonts/marketing-sans/CalibreWeb-Thin.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Light"), local("CalibreWeb-Light"),
+      url("/fonts/marketing-sans/CalibreWeb-Light.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Regular"), local("CalibreWeb-Regular"),
+      url("/fonts/marketing-sans/CalibreWeb-Regular.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Medium"), local("CalibreWeb-Medium"),
+      url("/fonts/marketing-sans/CalibreWeb-Medium.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Semibold"), local("CalibreWeb-Semibold"),
+      url("/fonts/marketing-sans/CalibreWeb-Semibold.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Bold"), local("CalibreWeb-Bold"),
+      url("/fonts/marketing-sans/CalibreWeb-Bold.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "marketing-sans";
+    src: local("Calibre Web Black"), local("CalibreWeb-Black"),
+      url("/fonts/marketing-sans/CalibreWeb-Black.woff2") format("woff2"),
+      url("/fonts/marketing-sans/CalibreWeb-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+  }
