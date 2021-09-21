@@ -4,13 +4,13 @@
 
 <div class="toc">
 
-  - [Installing Git](#installing-git)
-  - [Configuring Git](#configuring-git)
-  - [Generating SSH Keys](#generating-ssh-keys)
-  - [Copy SSH Public Key Content](#copy-ssh-public-key-content) 
-  - [Adding SSH key to source control](#adding-ssh-key-to-source-control)
-  - [Cloning the control repository](#cloning-the-control-repository)
-  - [Setting up VS Code and Puppet Extension](#setting-up-vs-code-and-puppet-extension)
+  - [Install Git](#install-git)
+  - [Configure Git](#configure-git)
+  - [Generate SSH keys](#generate-ssh-keys)
+  - [Copy SSH public key content](#copy-ssh-public-key-content) 
+  - [Add SSH key to source control](#add-ssh-key-to-source-control)
+  - [Clone the Control Repository](#clone-the-control-repository)
+  - [Set up VS Code and Puppet extension](#set-up-vs-code-and-puppet-extension)
   - [Push a change through VS Code](#push-a-change-through-vs-code)
   - [Troubleshooting](#troubleshooting)
 
@@ -18,17 +18,17 @@
 
 </div>
 
-## Installing Git<a href="#installing-git" aria-hidden="true"></a>
+## Install Git<a href="#install-git" aria-hidden="true"></a>
 
-In order to interact with a git based repository, you’ll need the git package installed locally on your workstation. It’s available for all platforms, Linux distros, Mac OSX and Windows. 
+In order to interact with a Git based repository, you’ll need to install the Git package on your workstation. It’s available for all platforms, Linux distros, Mac OSX and Windows. 
 
-1. Download and Install Git - You can download Git directly <a href="https://git-scm.com/downloads" target="_blank">here</a>.
+1. Download and install Git - You can download Git directly <a href="https://git-scm.com/downloads" target="_blank">here</a>.
 
 > There’s several steps and options to choose from when running through the installation however all of the defaults should be fine - However, double check that "Git bash" is selected during the installation. This is a prequisite for [Generating SSH keys](#generating-ssh-keys).
 
-## Configuring Git<a href="#configuring-git" aria-hidden="true"></a>
+## Configure Git<a href="#configure-git" aria-hidden="true"></a>
 
-When you commit a change to source control, the author's information must accompany that commit, therefore you cannot push any code until you configure your username and password.
+When you commit a change to source control, the author's information must accompany that commit, therefore you cannot push any code until you configure your username and email address.
 
 1. To do this, simply run the commands below in a powershell window, substituting the name and email address for your own name and email address:
 
@@ -44,7 +44,7 @@ When you commit a change to source control, the author's information must accomp
     git config --global core.safecrlf warn
     ```
 
-## Generating SSH Keys<a href="#generating-ssh-keys" aria-hidden="true"></a>
+## Generate SSH keys<a href="#generate-ssh-keys" aria-hidden="true"></a>
 
 We’ll leverage the `ssh-keygen` tool to create a SSH keypair.
 
@@ -52,13 +52,19 @@ We’ll leverage the `ssh-keygen` tool to create a SSH keypair.
 
 1. Open a Git bash terminal window on your workstation by right clicking on your desktop (or folder of choice) and select "Git bash Here".
 
+    <div class="size80margin">
+
+    ![alt text for screen readers](../assets/img/git_bash_here.png "Git bash")
+
+    </div>
+
 2. Run this command:
 
     ```bash
     ssh-keygen -t rsa
     ```
 
-3. When asked to "Enter a file in which to save the key", press return/enter.
+3. When asked "Enter a file in which to save the key", press return/enter.
 
 4. When asked for a passphrase, leave empty and press return/enter and press return once again when asked for confirmation of the passphrase. 
 
@@ -87,16 +93,16 @@ We’ll leverage the `ssh-keygen` tool to create a SSH keypair.
 
     </div>
 
-## Copy SSH Public Key Content<a href="#copy-ssh-public-key-content" aria-hidden="true"></a>
+## Copy SSH public key content<a href="#copy-ssh-public-key-content" aria-hidden="true"></a>
 
-You’ve now generated a SSH keypair. You'll need to provide the public key content to your  source control providor in order to authenticate our workstation. It will do this by verifying the private key (held locally) is the "other half" of the pair that the public key belongs to. Once authenticated, you can clone a copy of the control repo locally and push new changes to source control without the need for additional authentication.
+You’ve now generated a SSH keypair. You'll need to provide the public key content to your source control providor in order to authenticate our workstation. It will do this by verifying that the private key (held locally) is the "other half" of the pair that the public key belongs to. Once authenticated, you can clone a copy of the Control Repo locally and push new changes to source control without the need for additional authentication.
 
 
 1. Navigate to the directory shown in the public key location from the command output and open the `id_rsa.pub` file in Notepad.
 
     _or_
 
-    From the same bit bash terminal window, run this command and substitute your own your public key directory location shown in the command output
+    From the same Git bash terminal window, run this command and substitute your own your public key directory location shown in the command output from the previous step:
 
     ```bash
     cat /c/Users/JoeBloggs/.ssh/id_rsa.pub
@@ -123,9 +129,9 @@ You’ve now generated a SSH keypair. You'll need to provide the public key cont
 
     </div>
 
-## Adding SSH key to source control<a href="#adding-ssh-key-to-source-control" aria-hidden="true"></a>
+## Add SSH key to source control<a href="#add-ssh-key-to-source-control" aria-hidden="true"></a>
 
-Now that you’ve generated your SSH keys and copied the content of your public key, you need to add it to your source control provider's SSH keys store. 
+Now that you’ve generated your SSH keys and copied the content of your public key, you need to add it to your source control provider's SSH key store. 
 
 
 1. Below you can find documentation on how to add your SSH public key to your source control provider of choice (follow the Gitlab instructions if you’ve been following the labs):
@@ -138,12 +144,20 @@ Now that you’ve generated your SSH keys and copied the content of your public 
 
     <a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops" target="_blank">Azure DevOps</a>
 
-## Cloning the control repository<a href="#cloning-the-control-repository" aria-hidden="true"></a>
+## Clone the Control Repository<a href="#clone-the-control-repository" aria-hidden="true"></a>
 
-Once you’ve added your SSH public key to your source control platform, you should be ready to clone a copy of the control repo via SSH. 
+Once you’ve added your SSH public key to your source control platform, you should be ready to clone a copy of the Control Repo via SSH. 
 
-1. Navigate to your control-repo within your source control platform and look for the “clone with SSH” option (or similar phrasing) and copy the link provided.
+1. Navigate to your Control Repo within your source control platform and look for the “clone with SSH” option (or similar phrasing) and copy the link provided.
+
 2. Open a Git Bash terminal window on your workstation by right clicking on your desktop (or folder of choice) and select "Git Bash Here"
+
+    <div class="size80margin">
+
+    ![alt text for screen readers](../assets/img/git_bash_here.png "Git bash")
+
+    </div>
+
 3. Clone the repo locally to your workstation:
 
     From the Git Bash terminal window, type `git clone`, followed by <span style="text-decoration:underline;">your own git repo address</span> that you copied earlier:
@@ -169,25 +183,25 @@ Once you’ve added your SSH public key to your source control platform, you sho
 
     </div>
 
-    You should then be able to navigate to the relevant directory to find your control repo locally on your workstation.
+    You should then be able to navigate to the relevant directory to find your Control Repo locally on your workstation.
 
-## Setting up VS Code and Puppet Extension<a href="#setting-up-vs-code-and-puppet-extension" aria-hidden="true"></a>
+## Set up VS Code and Puppet extension<a href="#set-up-vs-code-and-puppet-extension" aria-hidden="true"></a>
 
-Now that you’ve got your control repo downloaded, it’s time to get VS Code and the puppet extension so that we can better interact with the control repo and puppet to create more configurations with ease.
+Now that you’ve got your Control Repo downloaded, it’s time to set up VS Code and the Puppet extension so that we can better interact with the Control Repo and Puppet to create more configurations with ease.
 
 1. Download and install VS Code. You can download VS Code for your workstation <a href="https://code.visualstudio.com/download" target="_blank">here</a>. 
-2. Once you’ve downloaded and installed VS Code, you’ll need to download and install the Puppet PDK, which can be found <a href="https://puppet.com/try-puppet/puppet-development-kit" target="_blank">here</a>. It’s a prerequisite for some of the Puppet extensions functionality however, we’ll explore the PDK further in labs coming in the future.
-3. Finally, you can install the puppet extension from this <a href="https://puppet-vscode.github.io" target="_blank">page</a>.
+2. Once you’ve downloaded and installed VS Code, you’ll need to download and install the Puppet PDK, which can be found <a href="https://puppet.com/try-puppet/puppet-development-kit" target="_blank">here</a>. It’s a prerequisite for some of the Puppet extensions functionality. We’ll explore the PDK further in labs coming in the future.
+3. Finally, you can install the Puppet extension from this <a href="https://puppet-vscode.github.io" target="_blank">page</a>.
 
-We’d recommend that you also check out the <a href="https://puppet-vscode.github.io/docs/features/" target="_blank">Puppet Extension docs</a> once you’re ready to start writing some puppet code.
+We’d recommend that you also check out the <a href="https://puppet-vscode.github.io/docs/features/" target="_blank">Puppet extension docs</a> once you’re ready to start writing some Puppet code.
 
 ## Push a change through VS Code<a href="#push-a-change-through-vs-code" aria-hidden="true"></a>
 
-Now that all the prerequisites are out of the way, the control repo is downloaded, git is configured, VS Code and the puppet extension is installed, you are fully ready to make some changes via VS Code to your control repo and push them to source control directly from VS Code.
+Now that all the prerequisites are out of the way, the Control Repo is downloaded, Git is configured and both VS Code and the Puppet extension are installed, you are now ready to make changes locally to your Control Repo and push those changes to source control, all within the same tool.
 
 
-1. Open VS Code and choose **File** > **Open Folder** then navigate to the control repo click **open**. 
-2. Now we’ve opened the control repo, let's edit the **README.md** file and add a line in there with the word “test”.
+1. Open VS Code and choose **File** > **Open Folder** then navigate to the Control Repo click **open**. 
+2. Now you've opened the Control Repo, edit the **README.md** file and add a line in there with the word “test”.
 
     <div class="size90margin">
 
@@ -212,7 +226,7 @@ Now that all the prerequisites are out of the way, the control repo is downloade
 
     </div>
 
-    This indicates that there’s now 1 pending change locally in the control repo. Whilst the file has been saved locally, we haven’t pushed any changes directly to source control yet.
+    This indicates that there’s now 1 pending change locally in the Control Repo. Whilst the file has been saved locally, we haven’t pushed any changes directly to source control yet.
 
 5. Click on the badge to see the file with pending change and then click on the **README.md** file under **Changes** to review your change.
 
@@ -247,7 +261,7 @@ Now that all the prerequisites are out of the way, the control repo is downloade
 
     </div>
 
-    You’ll now see in the bottom left hand corner, there is 1 commit ready to push upstream to the control repo in source control. 
+    You’ll now see in the bottom left hand corner, there is 1 commit ready to push upstream to the Control Repo in source control. 
 
     <div class="size50margin">
 
@@ -255,7 +269,7 @@ Now that all the prerequisites are out of the way, the control repo is downloade
 
     </div>
 
-8. To push the commit to the control repo, Click the ellipsis(**...**) > **Push.**
+8. To push the commit to the Control Repo, click the ellipsis(**...**) > **Push.**
 
     <div class="size50margin">
 
@@ -271,7 +285,7 @@ Now that all the prerequisites are out of the way, the control repo is downloade
 
     </div>
 
-9. Navigate to your source control platform and verify your commit has appeared as expected. It should display your commit message and Git username as configured in the earlier steps:
+9. Navigate to your source control platform and verify your commit has appeared as expected. It should display your commit message and Git username configured in the earlier steps:
 
     <div class="size90margin">
 
@@ -288,6 +302,6 @@ Now that all the prerequisites are out of the way, the control repo is downloade
 
 
 ## Troubleshooting<a href="#troubleshooting" aria-hidden="true"></a>
-* If either the `git clone` or `ssh-keygen` command doesn't work, ensure that you've installed Git Bash as part of the Git installation.
+* If either the `git clone` or `ssh-keygen` command doesn't work, ensure that you've installed Git Bash as part of the Git installation and you are running the command in a Git Bash terminal - See screenshot from [Generate SSH keys - Step 1](#generate-ssh-keys).
 
-* If you're having trouble finding your control repo even though the `git clone` executed successfully, It's possible that you may have cloned your control repo to an unintended location. Be sure to check where your present working directory is in the Git Bash terminal by running `pwd`.
+* If you're having trouble finding your Control Repo even though the `git clone` executed successfully, It's possible that you may have cloned your Control Repo to an unintended location. Be sure to check where your present working directory is in the Git Bash terminal by running `pwd`.
