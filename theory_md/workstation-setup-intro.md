@@ -36,7 +36,7 @@ You can find an illustration of this workflow below:
     * No need to login to source control everytime you want to make a change.
     * Creating and understanding folder structures within the Control Repo is easier.
     * Leverage VSCode with the Puppet extension to help you create configurations through syntax highlighting and suggestions.
-* Transferable skills - This is a common industry standard practice followed by a large majority of Developers, DevOps engineers, Sys admins and SRE's. 
+* Transferable skills - This is a common industry standard practice followed by a large majority of developers, DevOps engineers, sys admins and SRE's. 
 
 # Key Components<a href="#key-components" aria-hidden="true"></a>
 There are several key components that you'll need to configure to set up your workstation - it's crucial that you understand which function they each play in the workflow that you'll use day to day. This will help you troubleshoot issues faster and allow you to spend more time focusing on creating configurations.
