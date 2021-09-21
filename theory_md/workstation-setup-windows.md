@@ -152,7 +152,7 @@ Once you’ve added your SSH public key to your source control platform, you sho
 
 2. Open a Git Bash terminal window on your workstation by right clicking on your desktop (or folder of choice) and select "Git Bash Here"
 
-    <div class="size80margin">
+    <div class="size40margin">
 
     ![alt text for screen readers](../assets/img/git_bash_here.png "Git bash")
 
