@@ -708,6 +708,26 @@
     "label": "Workstation Setup",
     "url": "https://puppet-enterprise-guide.com/theory/workstation-setup.html"
   },{
+    "category": "Workstation Setup",
+    "label": "Overview",
+    "url": "https://puppet-enterprise-guide.com/theory/workstation-setup.html#overview"
+  },{
+    "category": "Workstation Setup",
+    "label": "Benefits to this approach",
+    "url": "https://puppet-enterprise-guide.com/theory/workstation-setup.html#benefits-to-this-approach"
+  },{
+    "category": "Workstation Setup",
+    "label": "Key components",
+    "url": "https://puppet-enterprise-guide.com/theory/workstation-setup.html#key-components"
+  },{
+    "category": "Workstation Setup",
+    "label": "Learning Git",
+    "url": "https://puppet-enterprise-guide.com/theory/workstation-setup.html#learning-git"
+  },{
+    "category": "Workstation Setup",
+    "label": "Configuring your workstation",
+    "url": "https://puppet-enterprise-guide.com/theory/workstation-setup.html#configuring-your-workstation"
+  },{
     "category": "Roles and Profiles",
     "label": "Roles and Profiles Overview",
     "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html"
