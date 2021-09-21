@@ -8,15 +8,15 @@
 - [Why would you use it?](#why-would-you-use-it)
 - [How does it work?](#how-does-it-work)
   - [Data hierarchy](#data-hierarchy)
-  - [Hiera Data layers](#hiera-data-layers)
+  - [Hiera data layers](#hiera-data-layers)
     - [Common data layer](#common-data-layer)
     - [Nodes data layer](#nodes-data-layer)
     - [Adding custom data layers](#adding-custom-data-layers)
-  - [Referring to Hiera in Code](#referring-to-hiera-in-code)
+  - [Referring to Hiera in code](#referring-to-hiera-in-code)
   - [Specifying attributes in Hiera](#specifying-attributes-in-hiera)
     - [Namespacing](#namespacing)
-    - [Attributes in the Common data Layer](#attributes-in-the-common-data-layer)
-    - [Attributes in the Nodes data Layer](#attributes-in-the-nodes-data-layer) 
+    - [Attributes in the common data Layer](#attributes-in-the-common-data-layer)
+    - [Attributes in the nodes data Layer](#attributes-in-the-nodes-data-layer) 
   - [Testing Hiera lookups](#testing-hiera-lookups)
 
 </div>
@@ -27,13 +27,13 @@
 
 Hiera is the builtin way that Puppet allows you to define variables for individual servers, or groups of servers. It's called Hiera due the hierarchical structure that it lets you define. You define layers of variables, from the most-specific (e.g. per server) to the least-specific (e.g. common/default). 
 
-When using Hiera, puppet code and it’s associated logic lives in manifests, structured as roles and profiles. 
+When using Hiera, Puppet code and it’s associated logic lives in manifests, structured as roles and profiles. 
 
-Infrastructure specific data lives in Hiera and is consumed via lookups in puppet code.
+Infrastructure specific data lives in Hiera and is consumed via lookups in Puppet code.
 
 # Why would you use it?<a href="#why-would-you-use-it" aria-hidden="true"></a>
 
-Using Hiera allows code to remain generic, reusable and shareable. Instead of hardcoding data values in puppet code, you can make these data points variables which then look for specific data in Hiera in order to form a “complete” configuration.
+Using Hiera allows code to remain generic, reusable, shareable and scalable. Instead of hardcoding data values in Puppet code, you can make these data points variables which then look for specific data in Hiera in order to form a “complete” configuration.
 
 # How does it work?<a href="#how-does-it-work" aria-hidden="true"></a>
 
@@ -66,11 +66,11 @@ As you can see from this default hierarchy, data values will be consumed in this
 1. `data/nodes/%{trusted.certname}.yaml`
 2. `data/common.yaml`
 
-This means that by default, node specific values identified by a YAML file with their certname, will take precedence over the `common.yaml` layer.
+This means that by default, node specific values identified by a YAML file with their certname as the file name, will take precedence over the `common.yaml` layer.
 
 For example, if the same Hiera value is found in both the `nodes` data layer and the `common` layer, the value within the `nodes` layer will be used and the value within the `common` layer will be ignored. This is because Hiera defaults to the `unique` type lookup which uses the first successful lookup of a variable through the layers of the hierarchy, top to bottom. Since the `nodes` layer is a level above the `common` layer in the Hiera hierarchy, the variable set in the upper layer will be chosen. There are other <a href="https://puppet.com/docs/puppet/latest/hiera_merging.html" target="_blank">lookup types</a> that can combine and merge the lookup results from multiple layers together, and this can be configured on a very granular level.
 
-## Hiera Data layers<a href="#hiera-data-layers" aria-hidden="true"></a>
+## Hiera data layers<a href="#hiera-data-layers" aria-hidden="true"></a>
 
 The Hiera `data` directory and it’s subdirectories house the actual YAML files that contain the variables for your configuration:
 
@@ -102,7 +102,7 @@ control-repo/
 
 ### Nodes data layer<a href="#nodes-data-layer" aria-hidden="true"></a>
 
-The nodes layer is where you can specify data values exclusive to specific nodes. Simply create a YAML file within the `nodes` subdirectory with the certname of your target node in puppet enterprise as it’s name and specify the relevant attributes and values within that file:
+The nodes layer is where you can specify data values exclusive to specific nodes. Simply create a YAML file within the `nodes` subdirectory with the certname of your target node in Puppet Enterprise as it’s file name and specify the relevant attributes and values within that file:
 
 <div class="noninteractive">
 
@@ -118,9 +118,9 @@ control-repo/
 
 ### Adding custom data layers<a href="#adding-custom-data-layers" aria-hidden="true"></a>
 
-You can easily create your own custom Hiera data layer based on any of the facts that puppet gathers on a node, for example, if you wanted to apply the same configuration to two nodes, of two different OSes with slightly different values, you could create an **os** data layer that would supply a different value based on the `operatingsystem` fact of the target node.
+You can easily create your own custom Hiera data layer based on any of the facts that Puppet gathers on a node, for example, if you wanted to apply the same configuration to two nodes, of two different OSes with slightly different values, you could create an **os** data layer that would supply a different value based on the `operatingsystem` fact of the target node.
 
-First, we’ll just need to create the relevant data directory to house the specific operating system Hiera values:
+First, you'll need to create the relevant data directory to house the specific operating system Hiera values:
 
 <div class="noninteractive">
 
@@ -129,13 +129,13 @@ control-repo/
 └─ data/
    ├─ common.yaml   	            		  
    ├─ nodes/  
-   └─ os/ 						
-      └─ RedHat.yaml			<- OS specific values go here      
+   └─ os/                   <- New data directory
+      └─ RedHat.yaml        <- OS specific values go here      
 ```
 
 </div>
 
-Now we need to define the new data layer within the paths key in the `hiera.yaml` hierarchy
+Now we need to define the new data layer within the paths key in the `hiera.yaml` hierarchy.
 
 The syntax for specifying a data layer is `"subdirectoryname/%{facts.factname}.yaml"`
 
@@ -162,13 +162,15 @@ hierarchy:
       - 'common.yaml'
 ```
 
-Custom data layers can be useful when leveraging some of the built-in puppet facts, but to make configurations and Hiera really “work” for your organisation it may be more useful to create some custom facts tailored to business specific needs and then create a Hiera data structure based around those. 
+Custom data layers can be useful when leveraging some of the built-in Puppet facts, but to make configurations and Hiera really “work” for your organisation it may be more useful to create some custom facts tailored to business specific needs and then create a Hiera data structure based around those. 
 
-Custom external facts are the easiest to get started with as you can create them using any script language. Regular custom facts are written in Ruby. You can find out more about both types in puppet docs: <a href="https://puppet.com/docs/puppet/latest/external_facts.html" target="_blank">External facts</a> and <a href="https://puppet.com/docs/puppet/latest/custom_facts.html" target="_blank">custom facts</a>.
+Custom external facts are the easiest to get started with as you can create them using any scripting language. Regular custom facts are written in Ruby. You can find out more about both types in puppet docs: <a href="https://puppet.com/docs/puppet/latest/external_facts.html" target="_blank">External facts</a> and <a href="https://puppet.com/docs/puppet/latest/custom_facts.html" target="_blank">custom facts</a>.
 
-## Referring to Hiera in Code<a href="#referring-to-hiera-in-code" aria-hidden="true"></a>
+## Referring to Hiera in code<a href="#referring-to-hiera-in-code" aria-hidden="true"></a>
 
-We’ve covered the data layer and hierarchy so far, but how do we actually tell puppet to fetch values from Hiera rather than hard coding data into puppet manifests. We simply add attributes to the class definition of a manifest:
+We’ve covered the data layer and hierarchy so far, but how do we actually tell Puppet to fetch values from Hiera rather than hard coding data into Puppet manifests? 
+
+We simply add attributes to the class definition within parentheses at the top of a manifest and reference the value in the resource to this attribute:
 
 ### Hardcoded parameters without Hiera
 
@@ -206,7 +208,7 @@ class profile::baseline (
 
 ## Specifying attributes in Hiera<a href="#specifying-attributes-in-hiera" aria-hidden="true"></a>
 
-So we’ve learnt how to structure the Hiera data hierarchy, how to refer to Hiera data in puppet code but now we need to know how to actually create Hiera data that puppet configurations can use. To do this, first we need to learn about namespacing. 
+So we’ve learnt how to structure the Hiera data hierarchy, how to refer to Hiera data in puppet code but now we need to know how to actually create Hiera data that Puppet configurations can use. To do this, first we need to learn about namespacing. 
 
 ### Namespacing<a href="#namespacing" aria-hidden="true"></a>
 
@@ -220,9 +222,16 @@ CLASSNAME::HIERAATTRIBUTE: MYVALUE
 
 </div>
 
-### Attributes in the Common data Layer<a href="#attributes-in-the-common-data-layer" aria-hidden="true"></a>
+### Attributes in the common data Layer<a href="#attributes-in-the-common-data-layer" aria-hidden="true"></a>
 
-We can simply specify this within the <span style="text-decoration:underline;">common.yaml</span> file if we want to add a generic value that applies to all nodes. Notice the namespacing below - our Hiera attribute is specified in the `profile::baseline` class and is named `$svcname` and in this instance we want the value to default to `'sshd'` - this is how it should look:
+We can simply specify this within the <span style="text-decoration:underline;">common.yaml</span> file if we want to add a generic value that applies to all nodes. Notice the namespacing below - our Hiera attribute is specified in the `profile::baseline` class, is named `$svcname` and in this instance we want the value to default to `'sshd'` - this is how it should look:
+
+<span style="text-decoration:underline;">control-repo/site-modules/data/common.yaml</span>
+
+
+```yaml
+profile::baseline::svcname: 'sshd'
+```
 
 <div class="noninteractive">
 
@@ -235,15 +244,8 @@ control-repo/
 
 </div>
 
-<span style="text-decoration:underline;">control-repo/site-modules/data/common.yaml</span>
 
-
-```yaml
-profile::baseline::svcname: 'sshd'
-```
-
-
-### Attributes in the Nodes data Layer<a href="#attributes-in-the-nodes-data-layer" aria-hidden="true"></a>
+### Attributes in the nodes data Layer<a href="#attributes-in-the-nodes-data-layer" aria-hidden="true"></a>
 
 We can get extremely granular with our Hiera variables right down to a “per node” level, if needed.
 
@@ -251,9 +253,16 @@ The syntax found at the nodes layer is as follows:
 
  `"nodes/%{trusted.certname}.yaml"`
 
-This means that we need to create a yaml file with the name of the target node’s certname (name of the nodes certificate name within PE) within the `nodes` subdirectory within the `data` directory. Once you’ve created this file, you can then add your Hiera variable content.
+This means that we need to create a yaml file with the name of the target node’s certname (name of the nodes certificate name within PE) within the `nodes` subdirectory of the `data` directory. Once you’ve created this file, you can then add your Hiera variable content.
 
-For example, if our target nodes certname within PE is **prodnode1.company** then you’ll need to create a YAML file named <span style="text-decoration:underline;">prodnode1.company.yaml</span> and add your relevant Hiera attribute content. In this example, the Hiera attribute value is `'ntpd'`:
+For example, if your target nodes certname within PE is **prodnode1.company** then you’ll need to create a YAML file named <span style="text-decoration:underline;">prodnode1.company.yaml</span> and add your relevant Hiera attribute content. In this example, the Hiera attribute value is `'ntpd'`:
+
+<span style="text-decoration:underline;">control-repo/site-modules/data/nodes/prodnode1.company.yaml</span>
+
+
+```yaml
+profile::baseline::svcname: 'ntpd'
+```
 
 <div class="noninteractive">
 
@@ -266,17 +275,11 @@ control-repo/
 ```
 </div>
 
-<span style="text-decoration:underline;">control-repo/site-modules/data/nodes/prodnode1.company.yaml</span>
-
-
-```yaml
-profile::baseline::svcname: 'ntpd'
-```
 
 
 Regardless of the content of the `common.yaml` file, the Hiera value found in the `nodes` layer has <span style="text-decoration:underline;">priority</span> due to the data hierarchy configured within the  `hiera.yaml` (shown here) file and values within this layer will be consumed first if there are values found for the same variable in both the `common.yaml` and <span style="text-decoration:underline;">prodnode1.company.yaml</span>.  
 
-Now If we applied the `profile::baseline` above to a node group containing the node <span style="text-decoration:underline;">prodnode1.company.yaml</span>, when Puppet runs, it will automatically look for an attribute match between puppet code and the Hiera data layer and resolve the `$svcname` attribute value within the puppet manifest to form a “full configuration”. 
+Now If we applied the `profile::baseline` above to a node group containing the node <span style="text-decoration:underline;">prodnode1.company.yaml</span>, when Puppet runs, it will automatically look for an attribute match between Puppet code and the Hiera data layer and resolve the `$svcname` attribute value within the Puppet manifest to form a “full configuration”. 
 
 Below you can find the “result” of the `profile::baseline` when the Hiera values have been resolved based on the node the configuration is applied to.
 
@@ -302,9 +305,9 @@ Below you can find the “result” of the `profile::baseline` when the Hiera va
 
 ## Testing Hiera lookups<a href="#testing-hiera-lookups" aria-hidden="true"></a>
 
-Once you’ve defined a hiera variable in your puppet manifest and specified a value within the hiera data layer, you can quickly test if Hiera is returning the expected value for a given node, without the need to simulate or execute a puppet run.
+Once you’ve defined a Hiera variable in your Puppet manifest and specified a value within the Hiera data layer, you can quickly test if Hiera is returning the expected value for a given node, without the need to simulate or execute a puppet run.
 
-To do this, you’ll need to log on to the Primary PE server via SSH and run the puppet lookup command. The command syntax is as follows:
+To do this, you’ll need to log on to the Primary Puppet server via SSH and run the Puppet lookup command. The command syntax is as follows:
 
 
 ```

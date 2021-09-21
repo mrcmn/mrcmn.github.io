@@ -50,8 +50,7 @@ apache::vhost { 'vhost.example.com':
 }
 ```
 
-
-We can take the code example above change the vhost name and specify a custom doc root. We can then wrap it in a simple profile class and store it in the within `site-modules/profile/manifests` directory in the control repo:
+We can take the code example above change the vhost name and specify a custom doc root. We can then wrap it in a simple profile class and store it in the within `site-modules/profile/manifests` directory in the Control Repo:
 
 apache_web.pp
 
@@ -69,7 +68,7 @@ class profile::apache_web {
 ```
 
 
-**<span style="text-decoration:underline;">Control repo location:</span>**
+**<span style="text-decoration:underline;">Control Repo location:</span>**
 
 <div class="noninteractive">
 
@@ -85,7 +84,7 @@ control-repo/
 
 ## Firewall profile<a href="#firewall-profile" aria-hidden="true"></a>
 
-The second profile will consist of a basic firewall configuration to allow http and https access. We’ve used an example from the <a href="https://forge.puppet.com/modules/puppetlabs/firewall#application-specific-rules" target="_blank">ddocumentation for the puppetlabs/firewall module</a>.
+The second profile will consist of a basic firewall configuration to allow http and https access. We’ve used an example from the <a href="https://forge.puppet.com/modules/puppetlabs/firewall#application-specific-rules" target="_blank">documentation for the puppetlabs/firewall module</a>.
 
 ### Firewall module code example:
 
@@ -97,7 +96,7 @@ The second profile will consist of a basic firewall configuration to allow http 
   }
 ```
 
-Just as before, we can take the code example above and wrap it in a simple profile class and store it in the within `site-modules/profile/manifests` directory in the control repo:
+Just as before, we can take the code example above and wrap it in a simple profile class and store it in the within `site-modules/profile/manifests` directory in the Control Repo:
 
 firewall.pp
 
@@ -112,7 +111,7 @@ class profile::firewall {
 }
 ```
 
-**<span style="text-decoration:underline;">Control repo location:</span>**
+**<span style="text-decoration:underline;">Control Repo location:</span>**
 
 <div class="noninteractive">
 
@@ -127,16 +126,16 @@ control-repo/
 
 </div>
 
-Now we have two profiles, `profile::apache_web` and `profile::firewall` that we can use as units of automation, like Lego bricks.
+Now we have two profiles, `profile::apache_web` and `profile::firewall` that we can use as units of automation, like lego bricks.
 
 
 # Role<a href="#role" aria-hidden="true"></a>
 
-We now want to create a role that combines both profiles or “Lego bricks”, so that we can assign this role to a server.
+We now want to create a role that combines both profiles or “lego bricks”, so that we can assign this role to a server.
 
 ## Web Server Role<a href="#web-server-role" aria-hidden="true"></a>
 
-To create a role, we’ll declare our two profile classes within a role manifest, and store it within `site-modules/role/manifests` directory in the control repo like so:
+To create a role, we’ll declare our two profile classes within a role manifest, and store it within `site-modules/role/manifests` directory in the Control Repo like so:
 
 web_server.pp
 
@@ -148,7 +147,7 @@ class role::web_server {
 ```
 
 
-**<span style="text-decoration:underline;">Control repo location:</span>**
+**<span style="text-decoration:underline;">Control Repo location:</span>**
 
 <div class="noninteractive">
 
@@ -166,16 +165,16 @@ control-repo/
 
 </div>
 
-Now we have a single role that we can assign to a group of servers in the Puppet Enterprise user interface - `role::web_server`
+Now we have a single role that we can assign to a group of servers in the Puppet Enterprise user interface - `role::web_server`.
 
 # Applying configuration<a href="#applying-configuration" aria-hidden="true"></a>
 
-Once you’ve pushed your changes to your control repo, it should be available on the Puppet server within a few seconds. This will happen automatically if the Puppet server is set to sync with source control each time there’s a commit to the control repo, Alternatively, you’ll need to run `puppet-code deploy --all --wait` directly on the Puppet server to pull the newest version of the control repo.
+Once you’ve pushed your changes to your Control Repo, it should be available on the Puppet Server within a few seconds. This will happen automatically if the Puppet Server is set to sync with source control each time there’s a commit to the control repo, alternatively, you’ll need to run `puppet-code deploy --all --wait` directly on the Puppet Server to pull the newest version of the Control Repo.
 
 You can then navigate to **Node groups** and click on your target node group. Navigate to the **Classes** tab.
 
 Type the name of the class under **Add new class**, choose your role (`role::web_server`) and then click **Add class** then **Commit 1 change**.
 
-If your class doesn’t appear, you may need to click **Refresh** to pick up the latest class definitions.
+> If your class doesn’t appear, you may need to click **Refresh** to pick up the latest class definitions.
 
 From your node group, in the top right corner, click **Run > Puppet** then **Run job**.

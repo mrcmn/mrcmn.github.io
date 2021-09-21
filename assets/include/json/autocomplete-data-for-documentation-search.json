@@ -729,8 +729,12 @@
     "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html#components"
   },{
     "category": "Roles and Profiles",
-    "label": "How do they work? - Role and Profile Directories",
+    "label": "How do they work? - Role and profile Directories",
     "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html#roles-and-profiles-directories"
+  },{
+    "category": "Roles and Profiles",
+    "label": "Considerations when building roles and profiles",
+    "url": "https://puppet-enterprise-guide.com/theory/roles-and-profiles-overview.html#considerations-when-building-roles-and-profiles"
   },{
     "category": "Roles and Profiles",
     "label": "Examples",

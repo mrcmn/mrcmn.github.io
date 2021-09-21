@@ -5,12 +5,12 @@
 <div class="toc">
 
 - [Example - Apache Configuration](#example---apache-configuration)
-- [Using Hiera in existing Puppet Code](#using-hiera-in-existing-puppet-code)
+- [Using Hiera in existing Puppet code](#using-hiera-in-existing-puppet-code)
 - [Hiera Data hierarchy](#hiera-data-hierarchy)
-- [Adding Hiera Data](#adding-hiera-data)
+- [Adding Hiera data](#adding-hiera-data)
   - [Applying configuration](#applying-configuration)
-  - [Example Node 1](#example-node-1-1)
-  - [Example Node 2](#example-node-2-1)
+  - [Example node 1](#example-node-1-1)
+  - [Example node 2](#example-node-2-1)
 - [Review](#review)
 
 </div>
@@ -18,13 +18,13 @@
 </div>
 
 # Example - Apache Configuration
-In this example, we'll walk through the process of removing hard coded data values from puppet code and moving them to hiera. We'll demonstrate how data can be consumed via multiple hiera data layers by adapting hiera data to accomdate for two nodes, running two different operating systems - RHEL and CentOS.
+In this example, we'll walk through the process of removing hard coded data values from Puppet code and moving them to Hiera. We'll demonstrate how data can be consumed via multiple Hiera data layers by adapting Hiera data to accomdate for two nodes, running two different operating systems - RHEL and CentOS.
 
-Each node will have the same puppet manifest applied however, based on the system information of the node itself, each of them will recieve slightly different configuration values.
+Each node will have the same Puppet manifest applied, however, based on the system information of the node itself, each of them will recieve slightly different configuration values.
 
-# Using Hiera in existing Puppet Code
+# Using Hiera in existing Puppet code
 
-We have a simple apache configuration below but all of the values are hardcoded within the class. We want to make those values dynamic by assigning them to Hiera attributes. Below you can find our configuration with hardcoded values:
+We have a simple apache configuration below but all of the values are hardcoded within the class. We want to make those values dynamic by assigning them to Hiera attributes:
 
 apache_web.pp
 
@@ -76,13 +76,13 @@ class profile::apache_web(
 }
 ```
 
-Note that the `$default_vhost, $vhost_name, $port `and` $doc_root `parameters are now variables which will be automatically populated from Hiera. The variables have not been given default values in this case, which means that you’d be required to set at least default values in your `common.yaml` in Hiera to prevent this class from failing. If you want to be able to use a class with overridable parameters even when no parameters have been explicitly defined in Hiera, you should either define sane defaults for the variables in the code directly, or configure a <a href="https://puppet.com/docs/puppet/latest/hiera_intro.html#hiera_config_layers-module-layer" target="_blank">module-specific Hiera</a> layer to retrieve defaults from there if the normal Hiera hierarchy does not deliver any results. 
+Note that the `$default_vhost`, `$vhost_name`, `$port` and `$doc_root` parameters are now variables which will be automatically populated from Hiera. The variables have not been given default values in this case, which means that you’d be required to set at least default values in your `common.yaml` in Hiera to prevent this class from failing. If you want to be able to use a class with overridable parameters even when no parameters have been explicitly defined in Hiera, you should either define sane defaults for the variables in the code directly, or configure a <a href="https://puppet.com/docs/puppet/latest/hiera_intro.html#hiera_config_layers-module-layer" target="_blank">module-specific Hiera</a> layer to retrieve defaults from there if the normal Hiera hierarchy does not deliver any results. 
 
-In this trivial example, we’ll leverage the **OS** fact to determine if a target node matches a given OS (CentOS or RedHat), it then receives a value specific to that OS. We'll also assign a vhost name based on a specific node using the **certname** fact. The rest of the Hiera values (`default_vhost `and` doc_root) `are defaults for all nodes in this example and will be consumed from the `common.yaml `file/common layer.
+In this trivial example, we’ll leverage the **OS** fact to determine if a target node matches a given OS (CentOS or RedHat), it then receives a value specific to that OS. We'll also assign a vhost name based on a specific node using the **certname** fact. The rest of the Hiera values (`default_vhost` and `doc_root`) are defaults for all nodes in this example and will be consumed from the `common.yaml` file/common layer.
 
-# Hiera Data hierarchy
+# Hiera data hierarchy
 
-Take a look at the `hiera.yaml `file below and review the data hierarchy under the `paths `key:
+From the `hiera.yaml` file below, review the data hierarchy under the `paths `key:
 
 
 ```yaml
@@ -108,20 +108,19 @@ As you can see, we have 3 Hiera data layers:
 2. `os/%{facts.operatingsystem}.yaml` 
 3. `common.yaml`
 
-This means that relevant hiera values in the nodes layer will be accepted first, then the os layer, then common.yaml 
+This means that relevant Hiera values in the nodes layer will be accepted first, then the os layer, then common.yaml 
 
 
-# Adding Hiera Data
-Our hiera data will be directly linked to the system attributes(Facts) of our target nodes. The two key system information facts that will determine the configuration for our nodes is operating system and node/certname.
-
+# Adding Hiera data
+Our Hiera data will be directly linked to the system attributes (facts) of our target nodes. The two key system information facts that will determine the configuration for our nodes are operating system and certname.
 
 The two nodes we want to target with this configuration have the following system attributes:
 
-### Example Node 1
+### Example node 1
 - Operating system: CentOS
 - Certname: `mynodecertname1.company`
 
-### Example Node 2
+### Example node 2
 
 - Operating system: RedHat
 - Certname: `mynodecertname2.company`
@@ -145,9 +144,9 @@ When these Hiera attribute values are resolved during catalog compilation, they 
 
 ## Applying configuration<a href="#applying-configuration" aria-hidden="true"></a>
 
-If we now push this configuration to source control and apply the `profile::apache_web` to two different nodes with a slightly different architecture, we'll get the following results:
+If we now push this configuration to source control and apply the `profile::apache_web` class to two different nodes with a slightly different architecture, we'll get the following results:
 
-## Example Node 1
+## Example node 1
 - Operating system: CentOS
 - Certname: `mynodecertname1.company`
 
@@ -171,7 +170,7 @@ data/nodes/mynodecertname1.company.yaml
 profile::apache_web::vhost_name: mynodecertname1.company.com
 ```
 
-Based on these hiera values, this node will receive a web server configuration with the following values, once Hiera lookups are reconciled: 
+Based on these Hiera values, this node will receive a web server configuration with the following values, once Hiera lookups are reconciled: 
 
 #### Resolved values for mynodecertname1.company
 
@@ -187,12 +186,12 @@ class profile::apache_web {
 }
 ```
 
-## Example Node 2
+## Example node 2
 
 - Operating system: RedHat
 - Certname: `mynodecertname2.company`
 
-Below you can find the hiera data that's relevant to this node, based on it's system information:
+Below you can find the Hiera data that's relevant to this node, based on it's system information:
 
 #### Relevant Hiera data:
 
@@ -233,4 +232,6 @@ Both configurations receive the same value for `default_vhost` and `doc_root` as
 
 Each node receives different Hiera values for `vhost_name` which is specific to them at a node level, identified by their PE certname in their respective yaml files (`mynodecertname1.company.yaml` and `mynodecertname2.company.yaml`) in the nodes data layer. 
 
-They also each receive different values for the `port` attribute based on the type of OS they’re running, RedHat or CentOS with values coming from `RedHat.yaml` and `CentOS.yaml` files in the OS data layer
+They also each receive different values for the `port` attribute based on the type of OS they’re running, RedHat or CentOS - with values coming from `RedHat.yaml` and `CentOS.yaml` files in the OS data layer.
+
+From this example you can see how the same configuration (via the `profile::apache_web` class) can be applied to multiple nodes but yet each node can recieve different configuration parameters based on key system information. Using this method means that Puppet code stays generic, maintainable sharable and scalable, whilst Hiera data holds the detail of specific configuration parameters. 

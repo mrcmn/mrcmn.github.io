@@ -1,6 +1,6 @@
 # Overview
 
-Now you understand how roles and profiles are structured, it’s time to create a role for yourself that’ll be made up of multiple profiles. In this lab, you'll create a role that will configure either a basic apache or IIS webserver depending on your target platform, along with the relevant firewall rules to allow access via HTTP/HTTPS.
+Now you understand how roles and profiles are structured, it’s time to create a role for yourself that’ll be made up of multiple profiles. In this lab, you'll create a role that will configure either a basic Apache or IIS webserver depending on your target platform, along with the relevant firewall rules to allow access via HTTP/HTTPS.
 
 You'll perform the following steps:
 
@@ -10,7 +10,7 @@ You'll perform the following steps:
 * Add profiles and role to the Control Repo
 * Review profiles and role content
 
-> This lab assumes you’ve configured SSH and Git on your workstation appropriately and that you’re working from a local copy of the control repo within VSCode and pushing to the control repo remotely. If you haven’t done this, you can find information on how to do so <a href="https://puppet-enterprise-guide.com/theory/workstation-setup.html" target="_blank">here</a>.
+> This lab assumes you’ve configured SSH and Git on your workstation appropriately and that you’re working from a local copy of the Control Repo within VSCode and pushing to the Control Repo remotely. If you haven’t done this, you can find information on how to do so <a href="https://puppet-enterprise-guide.com/theory/workstation-setup.html" target="_blank">here</a>.
 
 # Steps
 
@@ -133,14 +133,12 @@ You'll perform the following steps:
     }
     ```
 
-
-
 2. Save the file.
 
 ### Step 4: Add profiles and role to the Control Repo
 
 1. Ensure both profiles and your role are saved.
-2. Commit and push all of your changes to your control repo in source control.
+2. Commit and push all of your changes to your Control Repo in source control.
 
 ### Step 5: Review profiles and role content
 
@@ -148,9 +146,9 @@ You'll perform the following steps:
 
     #### Linux
 
-    In `profile::apache` you’re simply declaring the apache class. This is the bare minimum needed to install apache and stand up a webserver. It will leverage the <a href="https://forge.puppet.com/modules/puppetlabs/apache" target="_blank">puppetlabs/apache</a> module to install all the necessary prerequisites and software. It’ll also enable relevant services to ensure the webserver is up and running. 
+    In `profile::apache` you’re simply declaring the `apache` class. This is the bare minimum needed to install apache and stand up a webserver. It will leverage the <a href="https://forge.puppet.com/modules/puppetlabs/apache" target="_blank">puppetlabs/apache</a> module to install all the necessary prerequisites and software. It’ll also enable relevant services to ensure the webserver is up and running. 
 
-    `profile::lin_firewall `opens ports 80 and 443 by leveraging the <a href="https://forge.puppet.com/modules/puppetlabs/firewall" target="_blank">puppetlabs/firewall</a> module. As with the apache module, it will also ensure the relevant software is installed and associated services are enabled and running in order to enforce the specified firewall rules.
+    `profile::lin_firewall` opens ports 80 and 443 by leveraging the <a href="https://forge.puppet.com/modules/puppetlabs/firewall" target="_blank">puppetlabs/firewall</a> module. As with the apache module, it will also ensure the relevant software is installed and associated services are enabled and running in order to enforce the specified firewall rules.
 
     #### Windows
 

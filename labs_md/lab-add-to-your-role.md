@@ -1,6 +1,6 @@
 # Overview
 
-In this lab, you'll create a simple profile that will populate the webserver webpage with custom content, replacing the default webpage. You'll then add this profile to your role and run puppet to apply the new configuration.
+In this lab, you'll create a simple profile that will populate the webserver webpage with custom content, replacing the default webpage. You'll then add this profile to your role and run Puppet to apply the new configuration.
 
 You'll perform the following steps:
 
@@ -77,19 +77,19 @@ You'll perform the following steps:
 
     #### Linux
 
-    In `profile::lin_webpage` you’re creating a new default web page using the file resource. You’re specifying the path specified should be a “file” and it’s content should consist of “Hello World!”. This content will be displayed whenever you apply this configuration and then navigate to the IP address of your target node.
+    In `profile::lin_webpage` you’re creating a new default web page using the file resource. The path specified should be a “file” and it’s content should be “Hello World!”. This content will be displayed whenever you apply this configuration and then navigate to the IP address of your target node.
 
     `role::lin_webserver` has one small change to include the newly created profile as part of the role by specifying include `profile::lin_webpage`.
 
     #### Windows
 
-    In `profile::win_webpage` you’re creating a new default web page using the file resource. You’re specifying the path specified should be a “file” and it’s content should consist of “Hello World!”. This content will be displayed whenever you apply this configuration and then navigate to the IP address of your target node.
+    In `profile::win_webpage` you’re creating a new default web page using the file resource. The path specified should be a “file” and it’s content should be “Hello World!”. This content will be displayed whenever you apply this configuration and then navigate to the IP address of your target node.
 
     `role::win_webserver` has one small change to include the newly created profile as part of the role by specifying include `profile::win_webpage`.
 
 ### Step 4: Run Puppet to apply and enforce configuration
 
-1. From the sidebar, under the Enforcement section, choose **Jobs**
+1. From the sidebar, under the Enforcement section, choose **Jobs**.
 2. On the top right hand corner of the page, click the blue **Run Puppet** button.
 3. From the **Inventory** drop down, click on **Select a target type** and choose **Node Group**.
 4. In the _Enter a node group_ text field, choose **Lab Group Linux** _or_ **Lab Group Windows** (whichever is relevant to you), then click **Select**. You should now see your node.
@@ -97,9 +97,9 @@ You'll perform the following steps:
 
 ### Step 5: Review Puppet run information
 
-1. Under Node run result, you should see that your lab node has **intentional changes**.
+1. Under Node run result, you should see that your lab node has **Intentional changes**.
 2. To dive in further to what changes took place on that run, click on the time/date stamped report in the **Report** section.
-3. Click the dropdown to right of **Filter by event status**, choose **Intentional change**
+3. Click the dropdown to right of **Filter by event status**, choose **Intentional change**:
 
     #### Linux
 
