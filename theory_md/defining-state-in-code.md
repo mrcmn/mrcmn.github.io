@@ -529,7 +529,7 @@ If your class _doesn’t_ appear in the PE console from the Classes tab of your 
 1. **You need to refresh class definitions**
 
     Within your node group, under the Classes tab, ensure that class definitions are up to date. Class definitions are refreshed automatically every 10 minutes, however this value can be customised via the <a href="https://puppet.com/docs/pe/latest/config_console.html#console_and_console_services_parameters" target="_blank">`puppet_enterprise::profile::console::classifier_synchronization_period` parameter</a>. If you’re trying to apply new configurations to node groups straight after pushing changes to the Control Repo, you may need to click “refresh” to manually update class definitions as the refresh interval hasn’t been triggered yet. If your class doesn’t appear after a refresh, review the points below.
-2. **Your class isn’t in a location that Puppet looks for manifests**
+2. **Your manifest isn’t in a location where Puppet looks for them**
 
     See [Location](#location) above.
 
