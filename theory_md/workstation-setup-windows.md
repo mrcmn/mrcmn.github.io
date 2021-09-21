@@ -52,7 +52,7 @@ We’ll leverage the `ssh-keygen` tool to create a SSH keypair.
 
 1. Open a Git bash terminal window on your workstation by right clicking on your desktop (or folder of choice) and select "Git bash Here".
 
-    <div class="size40margin">
+    <div class="size50margin">
 
     ![alt text for screen readers](../assets/img/git_bash_here.png "Git bash")
 
