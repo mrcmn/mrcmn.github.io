@@ -261,7 +261,7 @@ Once you've added your Plan to the Control Repo, if it doesn’t appear in the P
 
 3. **Your Plan is not syntactically correct and is therefore not valid**
 
-    Review examples in [Storage](#storage) and [Naming](#naming) and consider using an IDE such as Visual Studio code with the Puppet Extension. This will help keep you on track when writing Puppet Code, Tasks and Plans to ensure that syntax is valid.
+    Review examples in [Storage](#storage) and [Naming](#naming) and consider using an IDE such as Visual Studio code with the Puppet Extension. This will help keep you on track when writing Puppet Code, Tasks and Plans to ensure that syntax is valid. If you want to set up and configure VS Code with the Puppet extension, we walk through this process in <a href="https://puppet-enterprise-guide.com/theory/workstation-setup.html" target="_blank">Workstation Setup</a>.
 
 4. **You need to perform a Code Deploy on the Puppet Server**
 

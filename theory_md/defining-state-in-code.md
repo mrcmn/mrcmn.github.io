@@ -539,7 +539,7 @@ If your class _doesn’t_ appear in the PE console from the Classes tab of your 
 
 4. **Your Puppet Code is not syntactically correct and is therefore not valid**
 
-     Ensure that the syntax in your Puppet manifest is aligned with the examples above and review your manifests against the examples found on <a href="https://puppet.com/docs/puppet/latest/lang_visual_index.html" target="_blank">Puppet language syntax examples</a> page. We would also recommend you use an IDE such as VS Code with the Puppet Extension. This will help keep you on track when writing code to ensure that Puppet code is valid and syntactically correct.
+     Ensure that the syntax in your Puppet manifest is aligned with the examples above and review your manifests against the examples found on <a href="https://puppet.com/docs/puppet/latest/lang_visual_index.html" target="_blank">Puppet language syntax examples</a> page. We would also recommend you use an IDE such as VS Code with the Puppet Extension. This will help keep you on track when writing code to ensure that Puppet code is valid and syntactically correct. If you want to set up and configure VS Code with the Puppet extension, we walk through this process in <a href="https://puppet-enterprise-guide.com/theory/workstation-setup.html" target="_blank">Workstation Setup</a>.
 
 5. **You need to perform a Code Deploy on the Puppet Server**
 

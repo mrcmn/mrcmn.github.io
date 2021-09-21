@@ -329,8 +329,8 @@ Once you've added your Task to the Control Repo, if the Task or it's Metadata do
 
 3. **Your Task Metadata is invalid**
 
-   If your Task is showing in the Puppet Console but not your Task Metadata, it's most likely invalid. Review examples in [Task examples](#task-examples) and if you're still having trouble, we would recommend that you consider using an IDE such as <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> with the <a href="https://puppet-vscode.github.io" target="_blank">Puppet</a> extension. This will help keep you on track when writing Puppet Code, Plans, Tasks and Task Metadata to ensure that syntax is valid.
-
+   If your Task is showing in the Puppet Console but not your Task Metadata, it's most likely invalid. Review examples in [Task examples](#task-examples) and if you're still having trouble, we would recommend that you consider using an IDE such as Visual Studio code with the Puppet Extension. This will help keep you on track when writing Puppet Code, Tasks and Plans to ensure that syntax is valid. If you want to set up and configure VS Code with the Puppet extension, we walk through this process in <a href="https://puppet-enterprise-guide.com/theory/workstation-setup.html" target="_blank">Workstation Setup</a>.
+   
 4. **You need to perform a Code Deploy on the Puppet Server**
 
     Ensure code has been deployed to the Puppet Server. If you don't have webhooks configured to automatically trigger code deployment, you'll need to run the `puppet-code deploy` command on the Puppet Server - you can find more info on how to perform a manual code deploy <a href="https://puppet.com/docs/pe/latest/puppet_code.html#deploy_environments" target="_blank">here</a>.
