@@ -792,6 +792,11 @@
   max-width: 50%;
   }
 
+  .markdown-body .size50margin img   {
+    max-width: 50%;
+    margin-top: 20px;
+    }
+
   .markdown-body .size60margin img   {
     max-width: 60%;
     margin-top: 20px;
