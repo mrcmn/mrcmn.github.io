@@ -28,6 +28,8 @@ The Puppet Enterprise guide is a practical and opinionated guide on how to get u
 3. How it works
 4. How you use it 
 
+> This guide is a personal project and not endorsed by Puppet.
+
 # Who is this for?<a href="#who-is-this-for" aria-hidden="true"></a>
 
 * Folks starting off with puppet and automation tooling
