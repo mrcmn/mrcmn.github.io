@@ -27,7 +27,7 @@ Before viewing package inventory, it must first be enabled. Once enabled, you ca
 To collect package inventory, you’ll need to enable it first for all agents. You’ll then need to perform two Puppet runs to begin collecting package inventory. The first run will apply the setting to your nodes and _enable_ package inventory collection. The second run will _collect_ package inventory for the first time.
 
 
-1. Open the Puppet Enterprise Web Console at <span style="text-decoration:underline;">https://&lt;IP address or FQDN></span> and login with username **admin** and the password you set earlier.
+1. Open the Puppet Enterprise Web Console at <span style="text-decoration:underline;">https://&lt;IP address or FQDN></span> and login with a username and password which has admin permissions.
 2. Under Inventory on the side bar, click the Node groups
 3. Expand the **PE infrastructure** by clicking the **⊞** sign, then click the **PE Agent** node group.
 4. Navigate to the **Classes** tab
