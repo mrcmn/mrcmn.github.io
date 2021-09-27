@@ -5,7 +5,7 @@ In this lab, you will set up and configure a Control Repo in order to store and 
 You'll perform the following steps:
 
 - Create a project for the Control Repo on your git server
-- Clone the template Control Repo to your git server
+- Clone template Control Repo and push to your git server
 - Setup SSH keys on the Puppet Enterprise server
 - Set a Deploy Key on the Control Repo
 - Enable Code Manager on Puppet Enterprise
@@ -23,14 +23,14 @@ You'll perform the following steps:
 
 
 1. Login to Gitlab web interface with an account that can create new groups and projects.
-2. Create a new group called puppet:
+2. Create a new group called "puppet":
     1. On the top navigation bar, click **Groups** → **Your groups**
     2. Click the green **New group** button on the right
     3. Set the **Group name** to: puppet
     4. Leave the **Visibility level** at its default of Private
     5. Click **Create group**
     6. You’ll land in the group’s overview page
-3. Create a new project called control-repo:
+3. Create a new project called "control-repo":
     1. Click the **New project** button on the right
     2. If Gitlab asks what type of new project to create, select **Create blank project**
     3. Set the **Project name** to: control-repo
@@ -39,7 +39,7 @@ You'll perform the following steps:
     6.  Click **Create project**
 
 
- ### Step 2: Clone the template Control Repo to your git server
+ ### Step 2: Clone template Control Repo and push to your git server
 
 Login to the terminal console of your Puppet Enterprise server with the <span style="text-decoration:underline;">root account</span>. It’s best to do this via SSH, so that you can easily copy & paste the commands from this Lab.
 
@@ -134,7 +134,7 @@ You’ll now create some SSH keys, so that the primary puppet server can use the
 
 To ensure the primary puppet server has access to the Control Repo on your git server, you’ll need to set the public key to be a Deploy Key on the repo in Gitlab.
 
-1. On the Puppet Enterprise server terminal console, display the pubic key:
+1. On the Puppet Enterprise server terminal console, display the public key:
 
    ```shell
    cat ~/.ssh/id_rsa.pub
