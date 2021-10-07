@@ -6,7 +6,7 @@ You'll perform the following steps:
 
 * Create patching node group
 * Add node to patching group
-* Create a `pe_patch` patching group
+* Create a pe_patch patching group
 * Run Puppet to pull patch information
 * Review high level patch information
 * Review granular patch information
@@ -29,7 +29,7 @@ You'll perform the following steps:
 3. To save the changes, click **Commit 1 change** in the lower right hand corner of the screen.
 4. Verify that your node has been successfully added to the group by reviewing the **Matching nodes** tab.
 
-### Step 3: Create a `pe_patch` patching group
+### Step 3: Create a pe_patch patching group
 
 1. Click on the **classes** tab.
 2. To the right of **Add new class** type **pe_patch** then select the class from the dropdown. 

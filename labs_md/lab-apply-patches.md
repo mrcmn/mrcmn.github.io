@@ -4,7 +4,7 @@ In this lab, you'll apply any patches available to your node using the built in 
 
 You'll perform the following steps:
 
-* Run the `pe_patch::patch_server` task
+* Run the pe_patch::patch_server task
 * Review high level patch information
 * Review granular patch information
 
@@ -12,7 +12,7 @@ You'll perform the following steps:
 
 # Steps
 
-### Step 1: Run the `pe_patch::patch_server` task
+### Step 1: Run the pe_patch::patch_server task
 
 1. Navigate to the **Patches** page, located in the PE sidebar 
 2. From the **All Patch Groups** dropdown, select **Patch Group 1**
