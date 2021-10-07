@@ -36,7 +36,6 @@ You'll perform the following steps:
 
     On Linux, the message content exists as a file. You should see 1 intentional change. This should be a change on a File resource: **/etc/motd**. You’ll notice that under **changed from** / **changed to** the actual content of the file will not be displayed. This is because showing the file content could become very unwieldy as the UI has limited space. Instead, Puppet shows a MD5 hash of the content to prove it was changed - you can decrypt the MD5 hash you’ll see the content of the MOTD file. You can also find the content of the MOTD within in the **Log** tab for this Puppet run.
 
-
     #### Windows 
 
     On Windows, the MOTD is set via registry values. You should see two intentional changes. Both resource changes will be on registry values: **legalnoticecaption** & **legalnoticetext**. Registry values are generally small enough to display in the console however due to the nature of the registry entries you’re working with in this example, the content is too large to be legible from this view. You can find the content of the MOTD within in the **Log** tab for this Puppet run.
