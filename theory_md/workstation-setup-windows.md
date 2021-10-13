@@ -246,7 +246,6 @@ Now that all the prerequisites are out of the way, the Control Repo is downloade
 
     </div>
 
-
     <div class="size50margin">
     
     ![alt text for screen readers](../assets/img/changes_staged.png "Changes staged")
