@@ -266,7 +266,7 @@ Code Manager is now able to deploy the Control Repo directly from Gitlab to the 
 As you probably wouldn’t want to manually run the `puppet code deploy` command every time you’ve made a change to your Control Repo on the git server, you can setup a webhook to automate this action.
 
 
-1. First, you need to enable local webhooks within Gitlab.  You can do this by navigating to **Admin** -> **Settings** -> **Network** -> **Outbound** **Requests** -> **Allow requests to the local network from hooks and services**
+1. First, you need to enable local webhooks within Gitlab.  You can do this by navigating to **Admin** (the spanner icon in the top left) -> **Settings** -> **Network** -> **Outbound** **Requests** -> **Allow requests to the local network from hooks and services**
 2. Next, you need to get the value of the RBAC token, which will form part of the webhook. To get the value, run this command on the terminal console of the Puppet Enterprise server:
 
    ```shell
@@ -414,7 +414,7 @@ mod 'kreeuwijk-vmtools_win',                  :latest
 4. Click the **Commit changes** button.
 5. The commit will trigger the webhook, which signals to Code Manager to perform another synchronization of the automation content in your Control Repo. As you’re installing quite a few modules for the first time here, it can take a few minutes for this action to complete. If you want, you can view the progress of the code deployment on the Puppet Enterprise server with this command on the terminal console:
    ``` shell
-   tail -f /var/log/puppetlabsæ/puppetserver/puppetserver.log
+   tail -f /var/log/puppetlabs/puppetserver/puppetserver.log
    ```
 6. When the log file above says the following, the deployment has finished:
    <div class="noninteractive">
