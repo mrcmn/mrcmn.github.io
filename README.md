@@ -21,7 +21,7 @@
 </div>
 
 # Overview<a href="#overview" aria-hidden="true"></a>
-The Puppet Enterprise guide is a practical and opinionated guide on how to get up and running with Puppet Enterprise (PE). The aim is that, by using this guide you'll be confident enough to deploy and manage PE day to day and thus be equipped to tackle any automation task that comes your way. The main goals for this guide is to help you understand:
+This non-affiliated guide is a practical and opinionated guide on how to get up and running with Puppet Enterprise (PE). The aim is that, by using this guide you'll be confident enough to deploy and manage PE day to day and thus be equipped to tackle any automation task that comes your way. The main goals for this guide is to help you understand:
 
 1. What the tool does
 2. When you would use it for specific automation tasks
